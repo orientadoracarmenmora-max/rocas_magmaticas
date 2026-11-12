@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es-ES"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rocas magmáticas · Biología y Geología</title>
+<style>
+:root{--paper:#fffaf1;--ink:#152742;--accent:#994523;--line:#d8b7a3;--card:#fffdf9;--soft:#f3e1d4;font-family:Arial,sans-serif;color:var(--ink);background:var(--paper)}
+*{box-sizing:border-box}body{margin:0;line-height:1.55}header,main,footer{max-width:76rem;margin:auto;padding:1rem clamp(1rem,5vw,4rem)}
+header{display:flex;gap:.65rem 1.1rem;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line)}header details{position:relative}header details>div{position:absolute;z-index:3;background:var(--card);padding:1rem;border:1px solid var(--line);border-radius:.6rem;min-width:14rem;max-width:90vw}header details:last-of-type>div{right:0}header details label{display:block;margin:.3rem 0}header button,header summary{min-height:2.5rem}
+button,select,.action{font:inherit;color:inherit;padding:.42rem .68rem;border:1px solid var(--line);border-radius:.45rem;background:var(--card)}button,summary{cursor:pointer}a{color:var(--accent)}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.action{display:inline-block;font-weight:bold}.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+nav{display:flex;flex-wrap:wrap;gap:.45rem 1.15rem;margin:0 0 2rem}nav a{padding:.3rem .1rem}nav [aria-current]{font-weight:bold;text-decoration-thickness:3px}.page{min-height:59vh}.cover{padding:clamp(2rem,8vw,7rem) 0;position:relative;isolation:isolate;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:1rem}.cover[hidden]{display:none}.cover>div:first-child{position:relative;z-index:1}.cover-rocks{opacity:.65;z-index:-1!important}
+h1,h2,h3{line-height:1.1;margin:0 0 .8em}h1{font-size:clamp(2.8rem,8vw,6.4rem);max-width:9ch;margin:.25em 0 .45em}h2{font-size:clamp(2rem,4vw,3.3rem)}h3{font-size:1.45rem}p{max-width:68ch}.brand{color:var(--accent);font-weight:bold;letter-spacing:.035em}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin-top:1.3rem}article{min-width:0;padding:clamp(1rem,3vw,1.8rem);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:.65rem;background:var(--card)}video,audio{width:100%;display:block}video{aspect-ratio:16/9;background:#121c2c}article details{margin-top:1rem}summary{font-weight:bold}.song-lyrics>div{margin:.85rem 0}.song-lyrics h4,.song-lyrics p{margin:0;white-space:pre-line}footer{font-size:.85rem;border-top:1px solid var(--line)}
+html[data-contrast=dark]{--paper:#000;--ink:#fff;--accent:#fff;--line:#fff;--card:#111}html[data-contrast=light]{--paper:#fff;--ink:#000;--accent:#000;--line:#000;--card:#fff}
+@media(max-width:42rem){.grid{grid-template-columns:1fr}.cover-rocks{opacity:.25}.cover{grid-template-columns:1fr;min-height:60vh}.cover-rocks{max-width:18rem}header details>div,header details:last-of-type>div{position:fixed;top:auto;left:1rem;right:1rem;width:auto}}
+@media print{header,nav,.cover .action,video,audio,.cover-rocks{display:none!important}.page,.page[hidden]{display:block!important;min-height:0;break-before:page}.cover{break-before:auto;padding:1rem 0;display:block!important}.grid{display:block}article{margin-bottom:1rem}details::details-content{display:block!important;content-visibility:visible!important}.song-lyrics>div{break-inside:avoid}}
+.cover-rocks{position:relative;width:min(100%,64svh);justify-self:center;aspect-ratio:1.07;isolation:isolate;border-radius:clamp(.85rem,3vw,2.1rem);overflow:hidden;background:linear-gradient(180deg,#e8edf3 0%,#f1eee7 73%);box-shadow:0 .85rem 2rem #15254016;print-color-adjust:exact}
+.mountain-sun,.mountain-back,.mountain-front,.mountain-ridge,.mountain-slope,.mountain-ground{position:absolute;print-color-adjust:exact}
+.mountain-sun{top:11%;right:12%;width:21%;aspect-ratio:1;border-radius:50%;background:#edb58c}
+.mountain-back,.mountain-front,.mountain-ridge,.mountain-slope,.mountain-shadow,.mountain-ground,.mountain-path{position:absolute;inset:0;print-color-adjust:exact}
+.mountain-back{background:#bbc9db;clip-path:polygon(0 62%,13% 51%,29% 34%,43% 50%,56% 43%,69% 56%,85% 42%,100% 63%,100% 100%,0 100%)}
+.mountain-front{background:linear-gradient(132deg,#8298b3 15%,#536e90 70%);clip-path:polygon(0 76%,10% 66%,21% 57%,31% 40%,46% 20%,59% 40%,70% 53%,84% 62%,100% 80%,100% 100%,0 100%)}
+.mountain-ridge{background:#d5e0ec;clip-path:polygon(31% 40%,46% 20%,59% 40%,63% 45%,54% 41%,50% 47%,45% 38%,40% 43%,36% 41%)}
+.mountain-slope{background:linear-gradient(143deg,#b0c2d7,#788fac 68%);clip-path:polygon(0 76%,10% 66%,21% 57%,31% 40%,36% 41%,39% 51%,29% 65%,21% 74%,16% 86%,8% 100%,0 100%)}
+.mountain-ground{background:#e2c6af;clip-path:polygon(0 91%,16% 86%,35% 87%,49% 82%,66% 79%,83% 82%,100% 88%,100% 100%,0 100%)}
+.mountain-shadow{background:linear-gradient(135deg,#65809f,#385676 80%);clip-path:polygon(46% 20%,54% 41%,59% 40%,70% 53%,84% 62%,100% 80%,100% 90%,82% 84%,70% 74%,60% 64%,56% 55%,49% 50%)}
+.mountain-path{background:#f4ddc7;clip-path:polygon(0 96%,17% 92%,32% 91%,51% 86%,62% 85%,54% 88%,35% 94%,16% 95%,0 99%)}
+@keyframes suno-spin{to{transform:rotate(4turn)}}
+@keyframes suno-cue{from{transform:rotate(0deg)}to{transform:rotate(27deg)}}
+@keyframes pdf-cut-down{from{top:7%}to{top:82%}}
+@keyframes pdf-open-left{from{transform:none}to{transform:translateX(-.65rem) rotate(-8deg)}}
+@keyframes pdf-open-right{from{transform:none}to{transform:translateX(.65rem) rotate(8deg)}}
+@keyframes demo-wonder{0%,100%{transform:none}35%{transform:translateY(-.6rem) rotate(-12deg)}70%{transform:rotate(8deg)}}
+@keyframes demo-slide{from{transform:translateX(-18%) rotate(-5deg)}to{transform:rotate(10deg)}}
+@keyframes demo-reveal{from{opacity:0;transform:translateY(.4rem)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
+</style>
+<body>
+<header>
+<button id="listen">▶ Escuchar</button><button id="stop" disabled>■ Detener</button>
+<details><summary>Elegir voz y velocidad</summary><div><label>Voz en español de España <select id="voice"></select></label><label>Velocidad <select id="rate"><option value=".8">Pausada</option><option value="1" selected>Normal</option><option value="1.2">Rápida</option></select></label></div></details>
+<details><summary>Accesibilidad</summary><div><button id="smaller" aria-label="Reducir tamaño de letra">A−</button> <output id="scale">100 %</output> <button id="larger" aria-label="Aumentar tamaño de letra">A+</button><label>Tipo de letra <select id="font"><option value="">Original</option><option>Verdana</option><option>Arial</option></select></label><label>Contraste <select id="contrast"><option value="">Original</option><option value="dark">Blanco sobre negro</option><option value="light">Negro sobre blanco</option></select></label><button id="reset">Restablecer diseño</button> <button id="print">PDF</button></div></details>
+<span id="status" role="status"></span>
+</header>
+<main>
+<nav aria-label="Recursos de estudio"><a href="#inicio">Inicio</a><a href="#presentacion">Presentación</a><a href="#videos">Vídeos</a><a href="#tarjetas">Tarjetas</a><a href="#canciones">Canciones</a></nav>
+<section class="page cover" id="inicio"><div><p class="brand">Patios Inclusivos</p><h1 tabindex="-1">Rocas magmáticas</h1><p>Biología y Geología · 1.º de Bachillerato</p><p><a class="action primary" href="#presentacion">Empezar a estudiar</a></p></div><div class="cover-rocks" aria-hidden="true">
+  <span class="mountain-sun"></span>
+  <span class="mountain-back"></span>
+  <span class="mountain-front"></span>
+  <span class="mountain-ridge"></span>
+  <span class="mountain-slope"></span>
+  <span class="mountain-shadow"></span>
+  <span class="mountain-ground"></span>
+  <span class="mountain-path"></span>
+</div></section>
+<section id="presentacion" class="page"><h2 tabindex="-1">Presentación de estudio</h2><p>Consulta las características de las rocas magmáticas y compara los dos grupos.</p><p><a class="action primary" href="recursos/presentacion.pdf" target="_blank" rel="noopener">Abrir la presentación completa (PDF)</a></p><div class="grid"><article><h3>Rocas volcánicas</h3><p>Pumita, andesita, obsidiana y basalto</p><a class="action" href="recursos/volcanicas-diapositivas.pdf" target="_blank" rel="noopener">Abrir diapositivas del bloque (PDF)</a></article><article><h3>Rocas plutónicas</h3><p>Granito, diorita, sienita y gabro</p><a class="action" href="recursos/plutonicas-diapositivas.pdf" target="_blank" rel="noopener">Abrir diapositivas del bloque (PDF)</a></article></div></section>
+<section id="videos" class="page"><h2 tabindex="-1">Vídeos cortos</h2><div class="grid"><article><h3>Rocas volcánicas</h3><p>Pumita, andesita, obsidiana y basalto</p><video controls playsinline preload="none" src="recursos/volcanicas-video.mp4" aria-label="Vídeo de las rocas volcánicas"></video></article><article><h3>Rocas plutónicas</h3><p>Granito, diorita, sienita y gabro</p><video controls playsinline preload="none" src="recursos/plutonicas-video.mp4" aria-label="Vídeo de las rocas plutónicas"></video></article></div></section>
+<section id="tarjetas" class="page"><h2 tabindex="-1">Tarjetas didácticas</h2><p>Responde de memoria antes de mirar la solución. Las preguntas están mezcladas dentro de cada grupo.</p><div class="grid"><article><h3>Rocas volcánicas</h3><p>Pumita, andesita, obsidiana y basalto</p><a class="action" href="recursos/volcanicas-tarjetas.pdf" target="_blank" rel="noopener">Abrir tarjetas de repaso (PDF)</a></article><article><h3>Rocas plutónicas</h3><p>Granito, diorita, sienita y gabro</p><a class="action" href="recursos/plutonicas-tarjetas.pdf" target="_blank" rel="noopener">Abrir tarjetas de repaso (PDF)</a></article></div></section>
+<section id="canciones" class="page"><h2 tabindex="-1">Canciones de Suno</h2><div class="grid"><article><h3>Rocas volcánicas</h3><p>Pumita, andesita, obsidiana y basalto</p><p><strong>Reggae</strong></p><audio controls preload="none" src="recursos/volcanicas-cancion.mp3" aria-label="Canción de las rocas volcánicas"></audio><details><summary>Leer la letra</summary><div class="song-lyrics">
+<div><h4>Pumita</h4><p>Pumita, vidrio volcánico espumoso,
+de color variable, generalmente grisáceo.
+Textura vacuolar, con gran porosidad.
+Flota en el agua por su baja densidad.</p></div>
+<div><h4>Andesita</h4><p>Andesita, de gris a violácea,
+con cristales de plagioclasa y piroxenos orientados.
+A menudo presenta textura fluidal,
+y su composición es equivalente a la de la diorita.</p></div>
+<div><h4>Estribillo</h4><p>Pumita, porosa y de baja densidad.
+Andesita, a menudo de textura fluidal.
+Obsidiana, de fractura concoidea.
+Basalto, forma la corteza oceánica.</p></div>
+<div><h4>Obsidiana</h4><p>Obsidiana, vidrio volcánico compacto,
+de color negro y con bordes cortantes.
+Su fractura es concoidea,
+forma curvas lisas al romperse.</p></div>
+<div><h4>Basalto</h4><p>Basalto, negro y denso,
+a veces presenta vacuolas.
+Forma la corteza oceánica
+y es la roca más abundante
+en el vulcanismo asociado a puntos calientes.</p></div>
+<div><h4>Estribillo final</h4><p>Pumita, porosa y de baja densidad.
+Andesita, a menudo de textura fluidal.
+Obsidiana, de fractura concoidea.
+Basalto, forma la corteza oceánica.</p></div>
+</div>
+</details></article><article><h3>Rocas plutónicas</h3><p>Granito, diorita, sienita y gabro</p><p><strong>Reguetón</strong></p><audio controls preload="none" src="recursos/plutonicas-cancion.mp3" aria-label="Canción de las rocas plutónicas"></audio><details><summary>Leer la letra</summary><div class="song-lyrics">
+<div><h4>Granito</h4><p>Granito, escucha su composición:
+cuarzo, ortosa, plagioclasas y micas.
+Cuarzo, ortosa, plagioclasas y micas.
+Es el principal componente
+de la corteza continental.</p></div>
+<div><h4>Diorita</h4><p>Diorita, oscura y moteada de blanco.
+Principalmente, plagioclasa y anfíboles.
+También contiene biotita y piroxenos.
+Su composición es equivalente a la de la andesita.</p></div>
+<div><h4>Estribillo</h4><p>Granito, corteza continental.
+Diorita, oscura, moteada de blanco.
+Sienita, mucha ortosa, sin cuarzo.
+Gabro, en la base de la corteza oceánica.</p></div>
+<div><h4>Sienita</h4><p>Sienita, de color rosado o naranja.
+Tiene abundante ortosa y carece de cuarzo.
+Abundante ortosa, carece de cuarzo.
+Suele estar asociada a plutones graníticos.</p></div>
+<div><h4>Gabro</h4><p>Gabro, roca de colores oscuros.
+Predominan los piroxenos y las plagioclasas,
+y contiene cristales de olivino.
+Forma masas plutónicas
+en la base de la corteza oceánica.</p></div>
+<div><h4>Estribillo final</h4><p>Granito, corteza continental.
+Diorita, oscura, moteada de blanco.
+Sienita, mucha ortosa, sin cuarzo.
+Gabro, en la base de la corteza oceánica.</p></div>
+</div>
+</details></article></div></section>
+</main>
+<footer>© 2026 Carmen Martínez Mora. Todos los derechos reservados.</footer>
+<script>
+const byId = id => document.getElementById(id);
+const pages = [...document.querySelectorAll('.page')];
+const nav = [...document.querySelectorAll('nav a')];
+const synth = window.speechSynthesis;
+const voice = byId('voice');
+const status = byId('status');
+let activePage;
+let voices = [];
+let speech;
+let scale = 100;
+
+function stop() {
+  speech = undefined;
+  synth?.cancel();
+  byId('stop').disabled = true;
+}
+function route(focus) {
+  stop();
+  status.textContent = '';
+  const next = pages.find(page => '#' + page.id === location.hash) || pages[0];
+  if (activePage && activePage !== next) {
+    activePage.querySelectorAll('audio,video').forEach(media => media.pause());
+  }
+  activePage = next;
+  pages.forEach(page => { page.hidden = page !== activePage; });
+  nav.forEach(link => {
+    if (link.hash === '#' + activePage.id) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+  if (focus) {
+    window.scrollTo(0, 0);
+    activePage.querySelector('h1,h2').focus({preventScroll:true});
+  }
+}
+
+function loadVoices() {
+  const previous = voice.value;
+  voices = (synth?.getVoices() || []).filter(item => /^es[-_]ES$/i.test(item.lang));
+  const safari = /Safari/.test(navigator.userAgent) && !/Chrome|Chromium|CriOS|Edg/.test(navigator.userAgent);
+  const preferred = voices.find(item => safari ? /m[oó]nica/i.test(item.name) : /google/i.test(item.name));
+  voice.replaceChildren(...voices.map(item => new Option(item.name,item.voiceURI)));
+  if (voices.some(item => item.voiceURI === previous)) voice.value = previous;
+  else if (preferred) voice.value = preferred.voiceURI;
+  voice.disabled = !voices.length;
+  if (!voices.length) voice.add(new Option('Sin voces disponibles',''));
+}
+
+byId('listen').onclick = () => {
+  stop();
+  const selected = voices.find(item => item.voiceURI === voice.value);
+  if (!selected) {
+    status.textContent = 'El dispositivo no ofrece una voz en español de España.';
+    return;
+  }
+  const text = [...activePage.querySelectorAll('h1,h2,h3,h4,p,article a')]
+    .filter(node => !node.closest('details:not([open])') && !node.querySelector('a'))
+    .map(node => node.innerText.trim()).filter(Boolean).join('. ');
+  speech = new SpeechSynthesisUtterance(text);
+  speech.lang = 'es-ES';
+  speech.voice = selected;
+  speech.rate = Number(byId('rate').value);
+  const current = speech;
+  current.onend = () => { if (speech === current) stop(); };
+  current.onerror = () => {
+    if (speech !== current) return;
+    stop();
+    status.textContent = 'No se ha podido iniciar la lectura.';
+  };
+  status.textContent = '';
+  byId('stop').disabled = false;
+  synth.speak(current);
+};
+byId('stop').onclick = stop;
+function setScale(value) {
+  scale = Math.min(160,Math.max(90,value));
+  document.documentElement.style.fontSize = scale + '%';
+  byId('scale').value = scale + ' %';
+}
+byId('smaller').onclick = () => setScale(scale - 10);
+byId('larger').onclick = () => setScale(scale + 10);
+byId('font').onchange = event => { document.documentElement.style.fontFamily = event.target.value; };
+byId('contrast').onchange = event => { document.documentElement.dataset.contrast = event.target.value; };
+byId('reset').onclick = () => {
+  setScale(100);
+  byId('font').value = byId('contrast').value = '';
+  document.documentElement.style.fontFamily = '';
+  document.documentElement.dataset.contrast = '';
+};
+byId('print').onclick = () => window.print();
+synth?.addEventListener('voiceschanged',loadVoices);
+window.addEventListener('hashchange', () => route(true));
+loadVoices();
+route(false);
+</script>
+</body></html>
